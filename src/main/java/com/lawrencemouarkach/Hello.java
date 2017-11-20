@@ -7,7 +7,7 @@ public class Hello {
 
     private static final String HELLO = "Hello ";
 
-    public String myHandler(String name, Context context) {
+    public String sayHello(String name, Context context) {
         LambdaLogger logger = context.getLogger();
         String sayHello = HELLO + name;
         logger.log(sayHello);

@@ -4,9 +4,14 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.LambdaLogger;
 
 public class Hello {
-    public String myHandler(int myCount, Context context) {
+
+    private static final String HELLO = "Hello ";
+
+    public String myHandler(String name, Context context) {
         LambdaLogger logger = context.getLogger();
-        logger.log("received : " + myCount);
-        return String.valueOf(myCount);
+        String sayHello = HELLO + name;
+        logger.log(sayHello);
+
+        return String.valueOf(sayHello);
     }
 }

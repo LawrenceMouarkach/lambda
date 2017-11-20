@@ -12,6 +12,6 @@ public class Hello {
         String sayHello = HELLO + name;
         logger.log(sayHello);
 
-        return String.valueOf(sayHello);
+        return sayHello;
     }
 }
